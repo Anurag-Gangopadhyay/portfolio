@@ -9,10 +9,10 @@
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">Anurag</h1>
+      <h1 class="logo"><img src="Anurag.jpeg" alt="Anurag Gangopadhyay"></h1>
       <nav>
-        <a href="#about">About</a>
         <a href="#projects">Projects</a>
+		<a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -22,25 +22,19 @@
     <div class="container">
       <h2>Hello, I'm <span>Anurag</span></h2>
       <p>I like reading, connecting with people, and building softwares</p>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I can build elegant, responsive websites using modern design principles. I am not Zuckerberg.</p>
+	  <p>I can build elegant, responsive websites using modern design principles.</p>
     </div>
   </section>
 
   <section id="projects" class="projects">
     <div class="container">
-      <h2>My Projects</h2>
+      <h2>PROJECTS</h2>
       <div class="project-grid">
         <div class="card">
           <h3>Bhashasamsad</h3>
-		  <a href="https://www.bhashasamsad.com">visit website</a>
           <p>A business website for Bhasha Samsad publications</p>
 		  <p>They have great bengali books/translations as well 😉</p>
+		  <button onclick = "window.location.href='https://www.bhashasamsad.com';">visit website</button>
         </div>
         <div class="card">
           <h3>Learnix</h3>
@@ -56,8 +50,39 @@
           <h3>Resume-Builder</h3>
           <p>A quick solution to building professional resume</p>
 		  <p>Multiple templates available, instant pdf download</p>
+		  <button onclick = "window.location.href = 'https://anurag-gangopadhyay.github.io/resume-builder/';">visit website</button>
         </div>
       </div>
+    </div>
+  </section>
+  
+  <section id= "gallery" class= "gallery">
+  <div class="container">
+       <h2 id="gallery">PROJECT GALLERY</h2>
+	  <div class="gallery-grid">
+	  
+	    <div class="gallery-card">
+		<div class="gallery-card-prev">&#10094;</div>
+		<div class="gallery-card-img">
+		<!--add picture here-->
+		<img src="gallery/img1.png" alt="Cart Page Screenshot">
+        <img src="gallery/img2.png" alt="Cart Page Screenshot">
+		<img src="gallery/img3.jpeg" alt="Cart Page Screenshot">
+        <img src="gallery/img4.jpeg" alt="Cart Page Screenshot">
+		<img src="gallery/img5.png" alt="Cart Page Screenshot">
+		<!--add picture-->
+		</div>
+		<div class="gallery-card-next">&#10095;</div>
+		</div>
+		
+	  </div>
+	  </div>
+ </section>
+  
+  <section class="skills">
+    <div class="container">
+	<h2>SKILLS</h2>
+      <p>JavaScript , PHP , Node.js , React.js , SQL , Java , Python , HTML , CSS</p>
     </div>
   </section>
 
@@ -71,5 +96,22 @@
   <footer>
     <p>&copy; 2025 Anurag. All rights reserved.</p>
   </footer>
+  
+  <script>
+  const gallery = document.querySelector('.gallery-card-img');
+  const prev = document.querySelector('.gallery-card-prev');
+  const next = document.querySelector('.gallery-card-next');
+
+  prev.addEventListener('click', () => {
+    gallery.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', () => {
+    gallery.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+  
+</script>
+
+  
 </body>
 </html>
