@@ -31,6 +31,8 @@ header {
 
 .logo img{
   border-radius:15px;
+  max-width:100px;
+  max-height:100px;
 }
 
 header .container {
